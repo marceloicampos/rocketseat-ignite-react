@@ -1,0 +1,19 @@
+/* usando Header.module.css estamos usando o CSS Module */
+/* Tente utilizar somente classes de css evite id e chamadas por tag */
+
+.header {
+    color: #e1e1e6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #333;
+    height: 120px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 25.5853px;
+
+    line-height: 160%;
+}
