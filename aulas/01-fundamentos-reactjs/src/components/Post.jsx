@@ -1,8 +1,11 @@
+import styles from './Post.module.css'
+
 export function Post(props) {
     return (
         <div>
-            <p>{props.author}</p>
-            <p>{props.content}</p>
+            <p className={styles.p1}>{props.author}</p>
+            <p className={styles.p2}>{props.content}</p>
+            <hr />
         </div>
     )
 }
