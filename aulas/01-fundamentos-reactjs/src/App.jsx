@@ -14,10 +14,12 @@ export default function App() {
     )
 }
 
-// function App () {
-//    return (
-//
-//      )
+// function App() {
+//     return (
+//         <>
+//             <h1>Hello World !</h1>
+//         </>
+//     )
 // }
 // export default App
-// acima temos a exportação padrão de um componente
+// // acima temos a exportação padrão de um componente
