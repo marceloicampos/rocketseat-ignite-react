@@ -1,6 +1,6 @@
 import { Header } from './components/Header'
 import { Post } from './components/Post'
-import './styles.css'
+import './global.css'
 // acima estamos importando estilos sem o CSS Module
 
 export default function App() {
