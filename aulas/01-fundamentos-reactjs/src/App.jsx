@@ -1,6 +1,6 @@
-import { Header } from './components/Header'
-import { Post } from './components/Post'
-import { Sidebar } from './components/Sidebar'
+import { Header } from '../src/components/Header'
+import { Post } from '../src/components/Post'
+import { Sidebar } from '../src/components/Sidebar'
 import appStyles from './App.module.css'
 import './global.css'
 // acima estamos importando estilos sem o CSS Module
