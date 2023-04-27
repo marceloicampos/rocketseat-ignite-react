@@ -1,7 +1,15 @@
 .p1 {
-    color: lightcoral;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    margin: 0.5em 0 0.5em;
 }
 
 .p2 {
-    color: lightgreen;
+    color: lightblue;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    margin: 0.5em 0 0.5em;
 }
