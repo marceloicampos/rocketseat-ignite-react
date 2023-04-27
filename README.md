@@ -1,16 +1,21 @@
-# rocketseat-ignite-react
+# Rocketseat Ignite React
 
 Inicio das aulas em 19/01/2023
 
-> npm create vite@latest
-aplique o comando acima SOMENTE para CRIAR um projeto do ZERO
+###### > Aplique o comando abaixo SOMENTE para CRIAR um projeto do ZERO
 
-> npm install
-aplique o comando acima para iniciar este projeto
-aplicar o comando dentro do diretório da aulas específica
-exemplo: npm run dev dentro de rocketseat-ignite-react/aulas/01-fundamentos-reactjs
+`npm create vite@latest`
 
-> npm run dev 
-aplique o comando acima para executar o projeto em localhost
-aplicar o comando dentro do diretório da aulas específica
-exemplo: npm run dev dentro de rocketseat-ignite-react/aulas/01-fundamentos-reactjs
+###### > Aplique o comando abaixo para INICIAR e instalar as dependências deste projeto
+
+-   nota: aplicar o comando dentro do diretório da aula específica
+-   exemplo: aplique npm install dentro de rocketseat-ignite-react/aulas/01-fundamentos-reactjs
+
+`npm install`
+
+###### > Aplique o comando abaixo para EXECUTAR o projeto em localhost
+
+-   nota: aplicar o comando dentro do diretório da aula específica
+-   exemplo: aplique npm run dev dentro de rocketseat-ignite-react/aulas/01-fundamentos-reactjs
+
+`npm run dev`
