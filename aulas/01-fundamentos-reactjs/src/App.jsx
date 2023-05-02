@@ -1,6 +1,6 @@
 import { Header } from '../src/components/Header'
 import { Sidebar } from '../src/components/Sidebar'
-import { Posts } from '../src/components/Posts'
+import { Post } from '../src/components/Post'
 import appStyles from './App.module.css'
 import './global.css'
 // acima estamos importando estilos sem o CSS Module
@@ -12,9 +12,9 @@ export default function App() {
             <div className={appStyles.wrapper}>
                 <Sidebar />
                 <main>
-                    <Posts author={'Marcelo Campos'} job={'Web Developer'} avatar={'https://github.com/marceloicampos.png'} />
-                    <Posts author={'Duda Campos'} job={'UI / UX Designer'} avatar={'https://github.com/jakeliny.png'} />
-                    <Posts author={'Caio Campos'} job={'QA Tester'} avatar={'https://github.com/maykbrito.png'} />
+                    <Post author={'Marcelo Campos'} job={'Web Developer'} avatar={'https://github.com/marceloicampos.png'} />
+                    <Post author={'Duda Campos'} job={'UI / UX Designer'} avatar={'https://github.com/jakeliny.png'} />
+                    <Post author={'Caio Campos'} job={'QA Tester'} avatar={'https://github.com/maykbrito.png'} />
                 </main>
             </div>
         </div>
