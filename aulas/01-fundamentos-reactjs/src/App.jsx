@@ -25,6 +25,7 @@ export default function App() {
 //     return (
 //         <>
 //             <h1>Hello World !</h1>
+//             <Posts author={'Marcelo Campos'} job={'Web Developer'} avatar={'https://github.com/marceloicampos.png'} />
 //         </>
 //     )
 // }
