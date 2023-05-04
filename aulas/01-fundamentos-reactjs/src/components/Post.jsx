@@ -38,7 +38,7 @@ export function Post(props) {
                 </footer>
             </form>
             <div className={styles.commentList}>
-                <Comment />
+                <Comment autor={'Rodrigo Gonçalves'} comment={'Muito bom, parabéns &#x1F44F;'} likes={'34'} imagem={'https://github.com/rodrigorgtic.png'} />
             </div>
         </article>
     )
