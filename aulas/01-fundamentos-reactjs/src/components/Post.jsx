@@ -6,13 +6,20 @@ export function Post(props) {
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img className={styles.avatar} src={props.avatar} alt="user avatar" />
+                    <img
+                        className={styles.avatar}
+                        src={props.avatar}
+                        alt="user avatar"
+                    />
                     <div className={styles.authorInfo}>
                         <strong>{props.author}</strong>
                         <span>{props.job}</span>
                     </div>
                 </div>
-                <time title="11 de Maio às 08:13h" dateTime="2022-05-11 08:13:30">
+                <time
+                    title="11 de Maio às 08:13h"
+                    dateTime="2022-05-11 08:13:30"
+                >
                     Publicado há 1 h
                 </time>
             </header>
@@ -38,7 +45,12 @@ export function Post(props) {
                 </footer>
             </form>
             <div className={styles.commentList}>
-                <Comment autor={'Rodrigo Gonçalves'} comment={'Muito bom, parabéns &#x1F44F;'} likes={'34'} imagem={'https://github.com/rodrigorgtic.png'} />
+                <Comment
+                    autor={'Rodrigo Gonçalves'}
+                    comment={'Muito bom, parabéns 👋'}
+                    likes={'34'}
+                    imagem={'https://github.com/rodrigorgtic.png'}
+                />
             </div>
         </article>
     )
