@@ -1,19 +1,21 @@
+import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 export function Post(props) {
+    // essa props vem do app.jsx
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img
-                        className={styles.avatar}
-                        src={props.avatar}
+                    <Avatar
+                        hasBorder
+                        src={props.avatar_user}
                         alt="user avatar"
                     />
                     <div className={styles.authorInfo}>
-                        <strong>{props.author}</strong>
-                        <span>{props.job}</span>
+                        <strong>{props.author_user}</strong>
+                        <span>{props.job_user}</span>
                     </div>
                 </div>
                 <time
@@ -46,10 +48,10 @@ export function Post(props) {
             </form>
             <div className={styles.commentList}>
                 <Comment
-                    autor={'Rodrigo Gonçalves'}
-                    comment={'Muito bom, parabéns 👋'}
-                    likes={'34'}
-                    imagem={'https://github.com/rodrigorgtic.png'}
+                    author_comment={'Rodrigo Gonçalves'}
+                    post_comment={'Muito bom, parabéns 👋'}
+                    likes_comment={'34'}
+                    avatar_comment={'https://github.com/rodrigorgtic.png'}
                 />
             </div>
         </article>

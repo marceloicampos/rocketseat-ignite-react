@@ -1,19 +1,21 @@
+import { Avatar } from './Avatar'
 import { ThumbsUp, Trash } from '@phosphor-icons/react'
 import styles from './Comment.module.css'
 
 export function Comment(props) {
+    // essa props vem do Post.jsx
     return (
         <div className={styles.comment}>
-            <img
-                className={styles.avatar}
-                src={props.imagem}
+            <Avatar
+                hasBorder={false}
+                src={props.avatar_comment}
                 alt="user avatar"
             />
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
                     <header>
                         <div className={styles.authorAndTime}>
-                            <strong>{props.autor}</strong>{' '}
+                            <strong>{props.author_comment}</strong>{' '}
                             <time
                                 title="11 de Maio às 08:13h"
                                 dateTime="2022-05-11 08:13:30"
@@ -25,12 +27,12 @@ export function Comment(props) {
                             <Trash size={24} />
                         </button>
                     </header>
-                    <p>{props.comment}</p>
+                    <p>{props.post_comment}</p>
                 </div>
                 <footer>
                     <button>
                         <ThumbsUp />
-                        Curtir<span>{props.likes}</span>
+                        Curtir<span>{props.likes_comment}</span>
                     </button>
                 </footer>
             </div>

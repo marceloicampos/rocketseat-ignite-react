@@ -1,7 +1,9 @@
+import { Avatar } from './Avatar'
 import { PencilLine } from '@phosphor-icons/react'
 import style from './Sidebar.module.css'
 
-export function Sidebar() {
+export function Sidebar(props) {
+    // essa props vem do app.jsx
     return (
         <aside className={style.sidebar}>
             <img
@@ -10,9 +12,13 @@ export function Sidebar() {
                 alt=""
             />
             <div className={style.profile}>
-                <img src="https://github.com/marceloicampos.png" alt="avatar do usuário" />
-                <strong>Marcelo Campos</strong>
-                <span>Web Developer</span>
+                <Avatar
+                    hasBorder
+                    src={props.avatar_user_logged}
+                    alt="user avatar"
+                />
+                <strong>{props.author_user_logged}</strong>
+                <span>{props.job_user_logged}</span>
             </div>
             <footer>
                 <a href="#">

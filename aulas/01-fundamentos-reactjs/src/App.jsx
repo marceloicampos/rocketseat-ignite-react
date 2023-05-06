@@ -10,11 +10,27 @@ export default function App() {
         <div>
             <Header />
             <div className={appStyles.wrapper}>
-                <Sidebar />
+                <Sidebar
+                    author_user_logged={'Marcelo Campos'}
+                    job_user_logged={'Web Developer'}
+                    avatar_user_logged={'https://github.com/marceloicampos.png'}
+                />
                 <main>
-                    <Post author={'Marcelo Campos'} job={'Web Developer'} avatar={'https://github.com/marceloicampos.png'} />
-                    <Post author={'Duda Campos'} job={'UI / UX Designer'} avatar={'https://github.com/jakeliny.png'} />
-                    <Post author={'Caio Campos'} job={'QA Tester'} avatar={'https://github.com/maykbrito.png'} />
+                    <Post
+                        author_user={'Marcelo Campos'}
+                        job_user={'Web Developer'}
+                        avatar_user={'https://github.com/marceloicampos.png'}
+                    />
+                    <Post
+                        author_user={'Duda Campos'}
+                        job_user={'UI / UX Designer'}
+                        avatar_user={'https://github.com/jakeliny.png'}
+                    />
+                    <Post
+                        author_user={'Caio Campos'}
+                        job_user={'QA Tester'}
+                        avatar_user={'https://github.com/maykbrito.png'}
+                    />
                 </main>
             </div>
         </div>
