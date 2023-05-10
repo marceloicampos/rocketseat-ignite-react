@@ -5,11 +5,6 @@ import appStyles from './App.module.css'
 import './global.css'
 // acima estamos importando estilos sem o CSS Module
 
-// id: uuid
-// author: {avatarUrl:"", name: "", job: ""}
-// publishedAt: Date
-// content: String
-
 const posts = [
     {
         id: 1,
@@ -76,21 +71,6 @@ export default function App() {
                     avatar_user_logged={'https://github.com/marceloicampos.png'}
                 />
                 <main>
-                    {/* <Post
-                        author_user={'Marcelo Campos'}
-                        job_user={'Web Developer'}
-                        avatar_user={'https://github.com/marceloicampos.png'}
-                    />
-                    <Post
-                        author_user={'Duda Campos'}
-                        job_user={'UI / UX Designer'}
-                        avatar_user={'https://github.com/jakeliny.png'}
-                    />
-                    <Post
-                        author_user={'Caio Campos'}
-                        job_user={'QA Tester'}
-                        avatar_user={'https://github.com/maykbrito.png'}
-                    /> */}
                     {posts.map(post => {
                         return (
                             <Post
