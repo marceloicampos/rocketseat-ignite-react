@@ -1,12 +1,19 @@
 import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import { format, formatDistanceToNow } from 'date-fns'
+import { useState } from 'react'
 import ptBR from 'date-fns/locale/pt-BR'
 import styles from './Post.module.css'
 
 export function Post({ author, content, publishedAt }) {
     // (props) essa props vem do app.jsx
     // vamos desestruturar o retorno de props e incluir apenas o que queremos buscar
+
+    // Estado no React são variáveis que queremos que o componente monitore
+    const [comments, setComments] = useState([])
+    // comentários, função de novos comentários com estado inicial de array vazio
+    const [newCommentText, setNewCommentText] = useState('')
+    // novo texto de comentários, função de novos textos de comentários com estado inicial de string vazia
 
     const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm 'hs'", {
         locale: ptBR
@@ -16,10 +23,21 @@ export function Post({ author, content, publishedAt }) {
         locale: ptBR,
         addSuffix: true
     })
-    // id: uuid
-    // author: {avatarUrl:"", name: "", job: ""}
-    // publishedAt: Date
-    // content: String
+
+    function handleCreateNewComment(event) {
+        event.preventDefault()
+
+        setComments([...comments, newCommentText])
+        // quando der submit no form, pegue todos comentários e adicione ao array um novo comentário
+        setNewCommentText('')
+        // após faça com que o novo comentário fique vazio
+    }
+
+    function handleNewCommentChange(event) {
+        setNewCommentText(event.target.value)
+        // pegue o valor da textarea e faça novo comentário
+    }
+
     return (
         <article className={styles.post}>
             <header>
@@ -42,18 +60,6 @@ export function Post({ author, content, publishedAt }) {
                 </time>
             </header>
             <div className={styles.content}>
-                {/* <p>Fala galera 👋</p>
-                <p>
-                    Acabei de subir mais um projeto no meu portfólio. É um projeto que fiz no NLW Return, evento da RocketSeat. O nome do projeto é DoctorCare🚀
-                </p>
-                <p>
-                    👉&nbsp;<a href="#">jane.design/doctorcare</a>
-                </p>
-                <p>
-                    <a href="#">#novoprojeto</a> {''}
-                    <a href="#">#nlw</a> {''}
-                    <a href="#">#rocketseat</a>
-                </p> */}
                 {content.map(line => {
                     if (line.type === 'paragraph') {
                         return <p>{line.content}</p>
@@ -73,20 +79,31 @@ export function Post({ author, content, publishedAt }) {
                     }
                 })}
             </div>
-            <form className={styles.commentForm}>
+            <form
+                onSubmit={handleCreateNewComment}
+                className={styles.commentForm}
+            >
                 <strong>Deixei seu Feedback</strong>
-                <textarea placeholder="Deixe um comentário" />
+                <textarea
+                    placeholder="Deixe um comentário"
+                    value={newCommentText}
+                    onChange={handleNewCommentChange}
+                />
                 <footer>
                     <button type="submit">Publicar</button>
                 </footer>
             </form>
             <div className={styles.commentList}>
-                <Comment
-                    author_comment={'Rodrigo Gonçalves'}
-                    post_comment={'Muito bom, parabéns 👋'}
-                    likes_comment={'34'}
-                    avatar_comment={'https://github.com/rodrigorgtic.png'}
-                />
+                {comments.map(comment => {
+                    return (
+                        <Comment
+                            author_comment={'Rodrigo Gonçalves'}
+                            post_comment={comment}
+                            likes_comment={'34'}
+                            avatar_comment={'https://github.com/rodrigorgtic.png'}
+                        />
+                    )
+                })}
             </div>
         </article>
     )
