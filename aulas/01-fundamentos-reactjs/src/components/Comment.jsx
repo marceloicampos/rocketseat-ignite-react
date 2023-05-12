@@ -1,12 +1,20 @@
 import { Avatar } from './Avatar'
 import { ThumbsUp, Trash } from '@phosphor-icons/react'
+import { useState } from 'react'
 import styles from './Comment.module.css'
 
 export function Comment({ avatar_comment, author_comment, post_comment, likes_comment, onDeleteComment }) {
     // essa props vem do Post.jsx
 
+    const [likeCount, setLikeCount] = useState(0)
+
     function handleDeleteComment() {
         onDeleteComment(post_comment)
+    }
+
+    function handleLikeComment() {
+        setLikeCount(likeCount + 1)
+        // console.log(likeCount);
     }
 
     return (
@@ -38,9 +46,9 @@ export function Comment({ avatar_comment, author_comment, post_comment, likes_co
                     <p>{post_comment}</p>
                 </div>
                 <footer>
-                    <button>
+                    <button onClick={handleLikeComment}>
                         <ThumbsUp />
-                        Curtir<span>{likes_comment}</span>
+                        Curtidas<span>{likeCount}</span>
                     </button>
                 </footer>
             </div>
