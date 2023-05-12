@@ -90,7 +90,7 @@
     margin-top: 1rem;
 }
 
-.commentForm footer {
+.commentForm > textarea:empty + footer {
     visibility: hidden;
     max-height: 0;
 }
