@@ -38,6 +38,17 @@ export function Post({ author, content, publishedAt }) {
         // pegue o valor da textarea e faça novo comentário
     }
 
+    function deleteComment(commentToDelete) {
+        // console.log(`Deletar comentário: ${comment}`)
+        
+        const commentsWithoutDeletedOne = comments.filter(comment => {
+            return comment !== commentToDelete
+        })
+        
+        // imutabilidade, onda as variáveis não sofrem mutação, nunca alteramos uma variável na memória, faremos a criação de um novo valor
+        setComments(commentsWithoutDeletedOne)
+    }
+
     return (
         <article className={styles.post}>
             <header>
@@ -98,10 +109,11 @@ export function Post({ author, content, publishedAt }) {
                     return (
                         <Comment
                             key={comment}
+                            avatar_comment={'https://github.com/rodrigorgtic.png'}
                             author_comment={'Rodrigo Gonçalves'}
                             post_comment={comment}
                             likes_comment={'34'}
-                            avatar_comment={'https://github.com/rodrigorgtic.png'}
+                            onDeleteComment={deleteComment}
                         />
                     )
                 })}
