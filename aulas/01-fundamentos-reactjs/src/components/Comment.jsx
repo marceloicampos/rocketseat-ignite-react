@@ -13,7 +13,12 @@ export function Comment({ avatar_comment, author_comment, post_comment, likes_co
     }
 
     function handleLikeComment() {
-        setLikeCount(likeCount + 1)
+        setLikeCount(state => {
+            return state + 1
+        })
+        // acima temos o uso de closures onde o estado anterior é " guardado "
+        // para uso no próximo estado
+        // setLikeCount(likeCount + 1)
         // console.log(likeCount);
     }
 
