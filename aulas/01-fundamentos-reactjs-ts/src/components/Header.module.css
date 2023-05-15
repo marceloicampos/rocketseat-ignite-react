@@ -1,0 +1,25 @@
+/* usando Header.module.css estamos usando o CSS Module */
+/* Tente utilizar somente classes de css evite id e chamadas por tag */
+
+.header {
+    background: var(--gray-800);
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+
+    align-items: center;
+
+    color: var(--gray-100);
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 25.5853px;
+
+    height: 82px;
+    line-height: 160%;
+    margin: 0;
+}
+
+.header img {
+    height: 2rem;
+}
