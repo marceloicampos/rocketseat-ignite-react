@@ -4,7 +4,7 @@ import buttonPlus from '../assets/button_plus.svg'
 
 export function TasksLists() {
   return (
-    <main className={styles.main}>
+    <div className={styles.tasksContainer}>
       <form action="#">
         <input type="text"
           placeholder='Adicione uma nova tarefa'
@@ -14,13 +14,17 @@ export function TasksLists() {
           <img src={buttonPlus} alt="botão de criar" />
         </button>
       </form>
-      <div>
-        <p>Tarefas Criadas<span> 0</span></p>
-        <p>Tarefas Concluídas<span> 0</span></p>
-      </div>
-      <img src={clipboardLogo} alt="logo ClipBoard" />
-      <p>Você ainda não tem tarefas cadastradas</p>
-      <p>Crie tarefas e organize seus itens a fazer</p>
-    </main>
+      <main className={styles.tasks}>
+        <div className={styles.countTasks}>
+          <p>Tarefas Criadas<span>0</span></p>
+          <p>Tarefas Concluídas<span>0</span></p>
+        </div>
+        <div className={styles.zeroTasks}>
+          <img src={clipboardLogo} alt="logo ClipBoard" />
+          <p>Você ainda não tem tarefas cadastradas</p>
+          <p>Crie tarefas e organize seus itens a fazer</p>
+        </div>
+      </main>
+    </div>
   )
 }

@@ -1,20 +1,118 @@
-main {
-    background: var(--gray-600);
+.tasksContainer {
+    max-width: 46rem;
+    margin: 0 auto;
 }
 
-p {
-    text-align: center;
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    margin-top: calc(0px - 1.5rem - 6px);
 }
 
-input {
+form > input {
     background: var(--gray-500);
     color: var(--gray-300);
     border: 1px solid var(--gray-700);
     border-radius: 8px;
+    width: 100%;
+    padding: 1rem;
+    margin-right: 1rem;
 }
 
-button {
-    background: var(--blue);
+form > button > img {
+    width: 16px;
+    height: 16px;
+}
+
+form > button {
+    background: var(--blue-dark);
     color: var(--gray-100);
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+form > button:hover {
+    background: var(--blue);
+}
+
+.tasks {
+    background: var(--gray-600);
+    
+}
+
+.countTasks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.countTasks > p {
+    text-align: center;
+    color: var(--blue);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 140%;
+}
+
+.countTasks > p:last-child {
+    color: var(--purple-dark);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 140%;
+}
+
+.countTasks > p > span {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--gray-200);
+    background: var(--gray-400);
+    border-radius: 50%;
+    margin-left: 8px;
+    padding: 0.125rem 0.5rem;
+}
+
+.zeroTasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding: 4rem 1.5rem;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
+
+.zeroTasks > img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+}
+
+.zeroTasks > p {
+    font-size: 1rem;
+    color: var(--gray-300);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 140%;
+}
+
+.zeroTasks > p:last-child {
+    font-size: 1rem;
+    color: var(--gray-300);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
 }

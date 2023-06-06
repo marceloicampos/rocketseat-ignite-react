@@ -6,9 +6,11 @@ import './global.css'
 
 export default function App() {
   return (
-    <div className={styles.root}>
+    <div>
       <Header />
-      <TasksLists />
+      <div className={styles.wrapper}>
+        <TasksLists />
+      </div>
     </div>
   )
 }
