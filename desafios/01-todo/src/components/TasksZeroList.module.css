@@ -3,45 +3,6 @@
     margin: 0 auto;
 }
 
-form {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4rem;
-    margin-top: calc(0px - 1.5rem - 6px);
-}
-
-form > input {
-    background: var(--gray-500);
-    color: var(--gray-300);
-    border: 1px solid var(--gray-700);
-    border-radius: 8px;
-    width: 100%;
-    padding: 1rem;
-    margin-right: 1rem;
-}
-
-form > button > img {
-    width: 16px;
-    height: 16px;
-}
-
-form > button {
-    background: var(--blue-dark);
-    color: var(--gray-100);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-form > button:hover {
-    background: var(--blue);
-}
-
 .tasks {
     background: var(--gray-600);
     
