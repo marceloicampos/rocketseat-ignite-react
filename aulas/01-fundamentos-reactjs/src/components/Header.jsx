@@ -1,4 +1,4 @@
-import styles from './Header.module.css'
+import headerStyles from './Header.module.css'
 import igniteLogo from '../assets/ignite_simbol.svg'
 
 // para usar o CSS Module importamos com um nome qualquer (que será uma representação do objeto css)
@@ -6,7 +6,7 @@ import igniteLogo from '../assets/ignite_simbol.svg'
 
 export function Header() {
     return (
-        <header className={styles.header}>
+        <header className={headerStyles.header}>
             <img
                 src={igniteLogo}
                 alt="logo ignite"

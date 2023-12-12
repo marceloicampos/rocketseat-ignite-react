@@ -1,4 +1,4 @@
-import styles from './Avatar.module.css'
+import avatarStyles from './Avatar.module.css'
 
 export function Avatar({ hasBorder = true, src }) {
     // const hasBorder = props.hasBorder !== false
@@ -15,7 +15,7 @@ export function Avatar({ hasBorder = true, src }) {
 
     return (
         <img
-            className={hasBorder ? styles.avatarWithBorder : styles.avatarWithOutBorder}
+            className={hasBorder ? avatarStyles.avatarWithBorder : avatarStyles.avatarWithOutBorder}
             src={src}
             alt="avatar do usuário"
         />

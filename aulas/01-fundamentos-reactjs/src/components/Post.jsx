@@ -3,7 +3,7 @@ import { Comment } from './Comment'
 import { format, formatDistanceToNow } from 'date-fns'
 import { useState } from 'react'
 import ptBR from 'date-fns/locale/pt-BR'
-import styles from './Post.module.css'
+import postStyles from './Post.module.css'
 
 export function Post({ author, content, publishedAt }) {
     // (props) essa props vem do app.jsx
@@ -57,27 +57,20 @@ export function Post({ author, content, publishedAt }) {
     const isNewCommentEmpty = newCommentText.trim().length === 0
 
     return (
-        <article className={styles.post}>
+        <article className={postStyles.post}>
             <header>
-                <div className={styles.author}>
-                    <Avatar
-                        hasBorder
-                        src={author.avatarUrl}
-                        alt="user avatar"
-                    />
-                    <div className={styles.authorInfo}>
+                <div className={postStyles.author}>
+                    <Avatar hasBorder src={author.avatarUrl} alt="user avatar" />
+                    <div className={postStyles.authorInfo}>
                         <strong>{author.name}</strong>
                         <span>{author.job}</span>
                     </div>
                 </div>
-                <time
-                    title={publishedDateFormatted}
-                    dateTime={publishedAt.toISOString()}
-                >
+                <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>
                     {publishedDateRelativeToNow}
                 </time>
             </header>
-            <div className={styles.content}>
+            <div className={postStyles.content}>
                 {content.map(line => {
                     if (line.type === 'paragraph') {
                         return <p key={line.content}>{line.content}</p>
@@ -97,10 +90,7 @@ export function Post({ author, content, publishedAt }) {
                     }
                 })}
             </div>
-            <form
-                onSubmit={handleCreateNewComment}
-                className={styles.commentForm}
-            >
+            <form onSubmit={handleCreateNewComment} className={postStyles.commentForm}>
                 <strong>Deixei seu Feedback</strong>
                 <textarea
                     placeholder="Deixe um comentário"
@@ -110,21 +100,18 @@ export function Post({ author, content, publishedAt }) {
                     required
                 />
                 <footer>
-                    <button
-                        type="submit"
-                        disabled={isNewCommentEmpty}
-                    >
+                    <button type="submit" disabled={isNewCommentEmpty}>
                         Publicar
                     </button>
                 </footer>
             </form>
-            <div className={styles.commentList}>
-                {comments.map(comment => {
+            <div className={postStyles.commentList}>
+                {comments.map((comment, index) => {
                     return (
                         <Comment
-                            key={comment}
-                            avatar_comment={'https://github.com/rodrigorgtic.png'}
-                            author_comment={'Rodrigo Gonçalves'}
+                            key={index}
+                            avatar_comment={'https://github.com/jakeliny.png'}
+                            author_comment={'Jakeliny Gracielly'}
                             post_comment={comment}
                             likes_comment={'34'}
                             onDeleteComment={deleteComment}

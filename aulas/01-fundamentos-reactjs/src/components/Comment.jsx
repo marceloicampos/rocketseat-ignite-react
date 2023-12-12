@@ -1,7 +1,7 @@
 import { Avatar } from './Avatar'
 import { ThumbsUp, Trash } from '@phosphor-icons/react'
 import { useState } from 'react'
-import styles from './Comment.module.css'
+import commentStyles from './Comment.module.css'
 
 export function Comment({ avatar_comment, author_comment, post_comment, likes_comment, onDeleteComment }) {
     // essa props vem do Post.jsx
@@ -23,16 +23,16 @@ export function Comment({ avatar_comment, author_comment, post_comment, likes_co
     }
 
     return (
-        <div className={styles.comment}>
+        <div className={commentStyles.comment}>
             <Avatar
                 hasBorder={false}
                 src={avatar_comment}
                 alt="user avatar"
             />
-            <div className={styles.commentBox}>
-                <div className={styles.commentContent}>
+            <div className={commentStyles.commentBox}>
+                <div className={commentStyles.commentContent}>
                     <header>
-                        <div className={styles.authorAndTime}>
+                        <div className={commentStyles.authorAndTime}>
                             <strong>{author_comment}</strong>
                             <time
                                 title="11 de Maio às 08:13h"
@@ -45,7 +45,7 @@ export function Comment({ avatar_comment, author_comment, post_comment, likes_co
                             onClick={handleDeleteComment}
                             title="Apagar Comentário"
                         >
-                            <Trash size={24} />
+                            <Trash size={22} />
                         </button>
                     </header>
                     <p>{post_comment}</p>

@@ -1,17 +1,17 @@
 import { Avatar } from './Avatar'
 import { PencilLine } from '@phosphor-icons/react'
-import style from './Sidebar.module.css'
+import sidebarStyles from './Sidebar.module.css'
 
 export function Sidebar(props) {
     // essa props vem do app.jsx
     return (
-        <aside className={style.sidebar}>
+        <aside className={sidebarStyles.sidebar}>
             <img
-                className={style.cover}
+                className={sidebarStyles.cover}
                 src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=50"
                 alt=""
             />
-            <div className={style.profile}>
+            <div className={sidebarStyles.profile}>
                 <Avatar
                     hasBorder
                     src={props.avatar_user_logged}
